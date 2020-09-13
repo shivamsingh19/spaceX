@@ -16,7 +16,7 @@ export class FilterPanelComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  slectedLaunchYear(year: number): void {
+  selectLaunchYear(year: number): void {
     this.router.navigate(['launchDetails'],
       {
         queryParams: {
@@ -26,7 +26,7 @@ export class FilterPanelComponent implements OnInit {
       });
   }
 
-  landing(value: boolean): void {
+  selectLandSuccess(value: boolean): void {
     this.router.navigate(['launchDetails'], {
       queryParams: {
         land_success: value
@@ -35,7 +35,7 @@ export class FilterPanelComponent implements OnInit {
     });
   }
 
-  launch(value: boolean): void {
+  selectLaunchSuccess(value: boolean): void {
     this.router.navigate(['launchDetails'],
       {
         queryParams: {

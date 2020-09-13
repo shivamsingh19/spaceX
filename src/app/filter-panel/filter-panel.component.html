@@ -4,15 +4,12 @@
     Clear Fliter
   </button>
   <h6>Launch Years</h6>
-  <div
-    class="dp-body row m-0"
-    *ngFor="let launchYear of launchYears; let i = index"
-  >
+  <div class="dp-body row m-0" *ngFor="let launchYear of launchYears">
     <div class="row">
       <button
         type="button"
         class="btn btn-success ml-2"
-        (click)="slectedLaunchYear(launchYear)"
+        (click)="selectLaunchYear(launchYear)"
       >
         {{ launchYear }}
       </button>
@@ -24,17 +21,21 @@
   <h6 class="mt-2">Successful Launch</h6>
   <div class="dp-body row ml-0">
     <div>
-      <button type="button" class="btn btn-success ml-2" (click)="launch(true)">
-        {{ true }}
+      <button
+        type="button"
+        class="btn btn-success ml-2"
+        (click)="selectLaunchSuccess(true)"
+      >
+        True
       </button>
     </div>
     <div>
       <button
         type="button"
         class="btn btn-success ml-2"
-        (click)="launch(false)"
+        (click)="selectLaunchSuccess(false)"
       >
-        {{ false }}
+        False
       </button>
     </div>
   </div>
@@ -44,18 +45,18 @@
       <button
         type="button"
         class="btn btn-success ml-2"
-        (click)="landing(true)"
+        (click)="selectLandSuccess(true)"
       >
-        {{ true }}
+        True
       </button>
     </div>
     <div>
       <button
         type="button"
         class="btn btn-success ml-2"
-        (click)="landing(false)"
+        (click)="selectLandSuccess(false)"
       >
-        {{ false }}
+        False
       </button>
     </div>
   </div>

@@ -10,14 +10,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./launch-details.component.css']
 })
 export class LaunchDetailsComponent implements OnInit {
-  spaceXDetails$: Observable<ISpaceXDetails>;
+  launchDetails$: Observable<ISpaceXDetails>;
 
   constructor(private missionDetailsService: MissionDetailsService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe(params => {
-      this.spaceXDetails$ = this.missionDetailsService.getSpaceXDetails(params);
+      this.launchDetails$ = this.missionDetailsService.getSpaceXDetails(params);
     });
   }
 
