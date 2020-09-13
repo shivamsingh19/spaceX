@@ -1,0 +1,36 @@
+.filter-header {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  align-items: center;
+  border: 2px solid;
+  justify-content: center;
+}
+
+.dp-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.row {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: -4px;
+  margin-left: 0px;
+}
+
+span:active {
+  background-color: yellow;
+}
+
+span:hover {
+  color: greenyellow;
+}
+
+.btn {
+  font-weight: 400;
+  font-size: 10px;
+  padding: 10px;
+}

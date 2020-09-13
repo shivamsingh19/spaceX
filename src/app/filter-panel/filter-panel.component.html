@@ -1,0 +1,62 @@
+<div class="cards_wrap card_item m-4" style="width: 100px">
+  <h4>Filters</h4>
+  <button type="button" class="btn btn-success ml-2 mb-2" (click)="clear()">
+    Clear Fliter
+  </button>
+  <h6>Launch Years</h6>
+  <div
+    class="dp-body row m-0"
+    *ngFor="let launchYear of launchYears; let i = index"
+  >
+    <div class="row">
+      <button
+        type="button"
+        class="btn btn-success ml-2"
+        (click)="slectedLaunchYear(launchYear)"
+      >
+        {{ launchYear }}
+      </button>
+    </div>
+
+    <!-- Force next columns to break to new line -->
+    <div class="w-100"></div>
+  </div>
+  <h6 class="mt-2">Successful Launch</h6>
+  <div class="dp-body row ml-0">
+    <div>
+      <button type="button" class="btn btn-success ml-2" (click)="launch(true)">
+        {{ true }}
+      </button>
+    </div>
+    <div>
+      <button
+        type="button"
+        class="btn btn-success ml-2"
+        (click)="launch(false)"
+      >
+        {{ false }}
+      </button>
+    </div>
+  </div>
+  <h6 class="mt-2">Successful Landing</h6>
+  <div class="dp-body row ml-0">
+    <div>
+      <button
+        type="button"
+        class="btn btn-success ml-2"
+        (click)="landing(true)"
+      >
+        {{ true }}
+      </button>
+    </div>
+    <div>
+      <button
+        type="button"
+        class="btn btn-success ml-2"
+        (click)="landing(false)"
+      >
+        {{ false }}
+      </button>
+    </div>
+  </div>
+</div>
