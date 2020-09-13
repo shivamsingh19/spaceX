@@ -1,9 +1,11 @@
-<div class="wrapper">
+<div *ngIf="!(spaceXDetails$ | async)">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<div class="wrapper" *ngIf="spaceXDetails$">
   <div class="cards_wrap">
-    <div
-      class="card_item"
-      *ngFor="let spaceXDetail of missionDetailsService$ | async"
-    >
+    <div class="card_item" *ngFor="let spaceXDetail of spaceXDetails$ | async">
       <div class="card_inner">
         <div class="card_top">
           <img [src]="spaceXDetail.links.mission_patch_small" alt="car" />

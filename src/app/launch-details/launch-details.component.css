@@ -1,0 +1,13 @@
+.sub-details {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.spinner-border {
+  margin-top: 100px;
+  margin-left: 150px;
+  width: 150px;
+  height: 150px;
+  color: blue;
+  border: 50px solid currentCol;
+}

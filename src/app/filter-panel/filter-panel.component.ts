@@ -10,13 +10,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class FilterPanelComponent implements OnInit {
   launchYears: number[] = [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020];
+
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   slectedLaunchYear(year: number): void {
-    this.router.navigate(['programs'],
+    this.router.navigate(['launchDetails'],
       {
         queryParams: {
           launch_year: year
@@ -26,7 +27,7 @@ export class FilterPanelComponent implements OnInit {
   }
 
   landing(value: boolean): void {
-    this.router.navigate(['programs'], {
+    this.router.navigate(['launchDetails'], {
       queryParams: {
         land_success: value
       },
@@ -35,7 +36,7 @@ export class FilterPanelComponent implements OnInit {
   }
 
   launch(value: boolean): void {
-    this.router.navigate(['programs'],
+    this.router.navigate(['launchDetails'],
       {
         queryParams: {
           launch_success: value
@@ -45,7 +46,7 @@ export class FilterPanelComponent implements OnInit {
   }
 
   clear(): void {
-    this.router.navigate(['programs']);
+    this.router.navigate(['launchDetails']);
   }
 
 }
