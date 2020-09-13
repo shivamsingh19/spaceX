@@ -1,6 +1,7 @@
 # SpaceX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+Used Angular 10, Bootstrap 4 and RXJS to build this application.
+Deployed it on the firebase hosting and also configured Action github workflow to build the application when we commit code every time and deploy it on the Firebase server.
 
 ## Development server
 
