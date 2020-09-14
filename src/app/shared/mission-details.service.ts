@@ -11,17 +11,17 @@ export class MissionDetailsService {
   constructor(private httpClient: HttpClient) { }
 
   getSpaceXDetails(args: IParamsTypes): Observable<ISpaceXDetails> {
-    let params;
+    const params = {};
     if (args) {
       const { launch_success, land_success, launch_year } = args;
       if (launch_success) {
-        params = { launch_success };
+        params['launch_success'] = launch_success;
       }
       if (land_success) {
-        params = { land_success };
+        params['land_success'] = land_success;
       }
       if (launch_year) {
-        params = { launch_year };
+        params['launch_year'] = launch_year;
       }
     }
     return this.httpClient.get<ISpaceXDetails>('https://api.spacexdata.com/v3/launches?limit=100', {

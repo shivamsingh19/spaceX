@@ -69,26 +69,32 @@ img {
   text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
   .cards_wrap .card_item {
-    width: 425px;
+    width: 25%;
   }
   .cards_wrap .card_inner {
-    width: 100%;
+    width: 765px;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .cards_wrap .card_item {
     width: 50%;
   }
+  .cards_wrap .card_inner {
+    width: 400px;
+  }
 }
 
-@media (max-width: 528px) {
+@media screen and (max-width: 700px) {
   .cards_wrap .card_top {
     height: auto;
   }
   .cards_wrap .card_item {
-    width: 100%;
+    width: 300px;
+  }
+  .cards_wrap .card_inner {
+    width: 250px;
   }
 }
